@@ -1,14 +1,25 @@
 <template>
   <div class="hello">
-    <li><router-link to="/giris-yap">Login</router-link></li>
+    Dashboard
+    {{ loginStatus }}
+    <ul>
+      <li><router-link to="/giris-yap">Login</router-link></li>
+      <li><router-link to="/hello">Hello</router-link></li>
+    </ul>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "HelloWorld",
   props: {
     msg: String,
+  },
+  computed: {
+    ...mapGetters({
+      loginStatus: "auth/getLoginStatus",
+    }),
   },
 };
 </script>
