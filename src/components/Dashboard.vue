@@ -1,10 +1,9 @@
 <template>
   <div class="hello">
     Dashboard
-    {{ loginStatus }}
     <ul>
-      <li><router-link to="/giris-yap">Login</router-link></li>
-      <li><router-link to="/hello">Hello</router-link></li>
+      <li><router-link to="/route1">App 1</router-link></li>
+      <li><router-link to="/route2">App 2</router-link></li>
     </ul>
   </div>
 </template>
